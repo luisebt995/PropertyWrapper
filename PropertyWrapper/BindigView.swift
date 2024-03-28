@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct BindigView: View {
-    @Binding var y: Int
+    //@Binding var y: Int
     @State var seleccion : Int?
-    @ObservedObject var adult1: MyClass
+    @EnvironmentObject var adult1: MyClass
     var body: some View {
         //NavigationView{
             VStack{
-                Text("The value is: \(y)")
-                Button("Add 2"){
-                    y += 2
+                Text("The value is: \(adult1.name)")
+                Button("Add abcde"){
+                    adult1.name = "abcde"
 
                 }
                 Text("Me llamo \(adult1.name) y tengo \(adult1.edad)")
@@ -27,7 +27,7 @@ struct BindigView: View {
                 NavigationLink(destination: ThirdView(),
                             tag: 1,
                             selection: $seleccion){
-                    Button("Change View x"){
+                    Button("Change View x and object"){
                         seleccion = 1
                     }
                 }
@@ -39,6 +39,6 @@ struct BindigView: View {
 struct BindigView_Previews: PreviewProvider {
     static var previews: some View {
         //BindigView(y: .constant(5), adult1: .init())
-        BindigView(y: .constant(5), adult1: MyClass())
+        BindigView().environmentObject(MyClass())
     }
 }

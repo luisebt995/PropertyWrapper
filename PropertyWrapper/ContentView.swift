@@ -31,7 +31,7 @@ struct ContentView: View {
                     student1.name =  "Enrique"
                     student1.edad = 21
                 }
-                NavigationLink(destination: BindigView(y: $x, adult1: student1),
+                NavigationLink(destination: BindigView(),
                             tag: 1,
                             selection: $seleccion){
                     Button("Change View x and object"){
@@ -41,13 +41,14 @@ struct ContentView: View {
                 PlayButton(isPlaying: $isPlaying)
             }
         }.navigationTitle("ContentView")
+            .environmentObject(student1)
         
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(MyClass())
     }
 }
 
