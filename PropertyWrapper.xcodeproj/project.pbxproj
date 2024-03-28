@@ -12,6 +12,7 @@
 		A053DBAC2BB4667100DE8D05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A053DBAB2BB4667100DE8D05 /* Assets.xcassets */; };
 		A053DBAF2BB4667100DE8D05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A053DBAE2BB4667100DE8D05 /* Preview Assets.xcassets */; };
 		A053DBB62BB46BA300DE8D05 /* BindigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A053DBB52BB46BA300DE8D05 /* BindigView.swift */; };
+		A077C5D22BB495BF00C0C695 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077C5D12BB495BF00C0C695 /* ThirdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		A053DBAB2BB4667100DE8D05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A053DBAE2BB4667100DE8D05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A053DBB52BB46BA300DE8D05 /* BindigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindigView.swift; sourceTree = "<group>"; };
+		A077C5D12BB495BF00C0C695 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				A053DBAB2BB4667100DE8D05 /* Assets.xcassets */,
 				A053DBAD2BB4667100DE8D05 /* Preview Content */,
 				A053DBB52BB46BA300DE8D05 /* BindigView.swift */,
+				A077C5D12BB495BF00C0C695 /* ThirdView.swift */,
 			);
 			path = PropertyWrapper;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A077C5D22BB495BF00C0C695 /* ThirdView.swift in Sources */,
 				A053DBAA2BB4666E00DE8D05 /* ContentView.swift in Sources */,
 				A053DBA82BB4666E00DE8D05 /* PropertyWrapperApp.swift in Sources */,
 				A053DBB62BB46BA300DE8D05 /* BindigView.swift in Sources */,

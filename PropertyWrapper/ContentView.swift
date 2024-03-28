@@ -15,6 +15,7 @@ class MyClass : ObservableObject {
 struct ContentView: View {
     @State private var x = 0
     @State private var seleccion:Int?
+    @State private var isPlaying : Bool = false
     @StateObject private var student1 = MyClass()
     
     var body: some View {
@@ -23,6 +24,7 @@ struct ContentView: View {
                 Text("Valor x: \(x)")
                 Button("Suma 1"){
                     x += 1
+                    isPlaying.toggle()
                 }
                 Text("Mi nombre es \(student1.name) y mi edad es \(student1.edad)")
                 Button("Change Object"){
@@ -36,6 +38,7 @@ struct ContentView: View {
                         seleccion = 1
                     }
                 }
+                PlayButton(isPlaying: $isPlaying)
             }
         }.navigationTitle("ContentView")
         
@@ -45,5 +48,15 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct PlayButton : View {
+    @Binding var isPlaying : Bool
+    
+    var body: some View {
+        Button(isPlaying ? "Pause" : "Play"){
+            isPlaying.toggle()
+        }
     }
 }
